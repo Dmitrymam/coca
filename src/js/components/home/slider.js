@@ -19,3 +19,15 @@ export const useInsightSlider = () => {
     },
   });
 };
+
+export const useTestimonialsSlider = () => {
+  const insightSlider = new Swiper('.testimonials__slider', {
+    // ,
+    slidesPerView: "auto",
+    loop: true,
+    navigation: {
+      nextEl: '.testimonials__btn--next',
+       prevEl: '.testimonials__btn--prev',
+    },
+  });
+};
