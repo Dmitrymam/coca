@@ -3,9 +3,12 @@
 .testimonials{
     padding: 69px 0 160px;
 
+
     @include mobile{
         padding: 39px 0 70px
     }
+
+    
 
     &__head{
         @include flex-all-between;
@@ -78,6 +81,13 @@ color: var(--neutral-color-150);
     &__slider{
         max-width: 898px;
     }
+
+
+    &__comments{
+        max-width: 800px;
+    }
+    
+
 
     &__comment{
         &-text{

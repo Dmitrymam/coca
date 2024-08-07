@@ -23,7 +23,7 @@ export const useInsightSlider = () => {
 export const useTestimonialsSlider = () => {
   const insightSlider = new Swiper('.testimonials__slider', {
     // ,
-    slidesPerView: "auto",
+    slidesPerView: "1",
     loop: true,
     navigation: {
       nextEl: '.testimonials__btn--next',
