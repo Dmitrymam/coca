@@ -23,11 +23,11 @@ export const useInsightSlider = () => {
 export const useTestimonialsSlider = () => {
   const insightSlider = new Swiper('.testimonials__slider', {
     // ,
-    slidesPerView: "1",
+    slidesPerView: '1',
     loop: true,
     navigation: {
       nextEl: '.testimonials__btn--next',
-       prevEl: '.testimonials__btn--prev',
+      prevEl: '.testimonials__btn--prev',
     },
   });
 };

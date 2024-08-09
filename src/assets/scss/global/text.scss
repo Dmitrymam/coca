@@ -1,6 +1,18 @@
 .heading {
   &-h1 {
     font-size: 72px;
+
+    @include tablet {
+      font-size: 56px;
+    }
+
+    @include mobile {
+      font-size: 40px;
+    }
+
+    @include small-mobile {
+      font-size: 34px;
+    }
   }
 
   &-h2 {
@@ -22,15 +34,15 @@
   &-h3 {
     font-size: 40px;
 
-    @include tablet{
+    @include tablet {
       font-size: 32px;
     }
 
-    @include mobile{
+    @include mobile {
       font-size: 26px;
     }
 
-    @include small-mobile{
+    @include small-mobile {
       font-size: 24px;
     }
   }
