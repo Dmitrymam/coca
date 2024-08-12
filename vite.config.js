@@ -5,12 +5,12 @@ import { ViteMinifyPlugin } from 'vite-plugin-minify';
 
 export default defineConfig({
   root: './src',
-
+  base: "/coca/",
   server: {
     port: 3030,
     open: true,
   },
-
+  publicDir: "./src/asssets",
   build: {
     outDir: '../dist',
     emptyOutDir: true,
