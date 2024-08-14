@@ -4,7 +4,8 @@ import '/scss/audience.scss';
 
 import { useTheme } from './components/theme.js';
 import { useBurger } from './components/burger.js';
+import { useHeroAudienceSlider } from './components/audience/slider.js';
 
 useTheme();
 useBurger();
-
+useHeroAudienceSlider();
