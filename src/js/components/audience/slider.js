@@ -24,3 +24,29 @@ export const useHeroAudienceSlider = () => {
     },
   });
 };
+
+export const useOurTeamSlider = () => {
+  const insightSlider = new Swiper('.our-team__slider', {
+    slidesPerView: 1,
+    spaceBetween: 15,
+    loop: true,
+    navigation: {
+      nextEl: '.our-team__btn--next',
+      prevEl: '.our-team__btn--prev',
+    },
+    scrollbar: {
+      el: '.our-team__scrollbar',
+    },
+    breakpoints: {
+      1201: { slidesPerView: 3 },
+      769: { slidesPerView: 2.5, spaceBetween: 20 },
+      577: { slidesPerView: 2, spaceBetween: 15 },
+      381: {
+        slidesPerView: 1.5,
+        spaceBetween: 15,
+      },
+
+      // 577: { spaceBetween: 20, slidesPerView: 2 },
+    },
+  });
+};
