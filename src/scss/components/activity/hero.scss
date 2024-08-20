@@ -72,8 +72,24 @@
     &--big {
       display: flex;
       margin: 0 auto;
-      padding-left: 3vw;
-      max-width: 1300px;
+      padding-left: 60px;
+      max-width: 1340px;
+
+      @include mini-desktop {
+        padding: 40px;
+      }
+
+      @include tablet {
+        padding-left: 25px;
+      }
+
+      @include mobile {
+        padding-left: 20px;
+      }
+
+      @include small-mobile {
+        padding-left: 15px;
+      }
     }
   }
 
