@@ -1,0 +1,11 @@
+@import './mixins/';
+@import './base/';
+@import './global/';
+
+// components
+
+@import './components/header';
+@import './components/activity/hero';
+@import './components/activity/information';
+@import './components/activity/article';
+@import './components/footer';
