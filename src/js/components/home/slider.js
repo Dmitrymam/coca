@@ -9,9 +9,12 @@ import 'swiper/css/bundle';
 export const useInsightSlider = () => {
   const insightSlider = new Swiper('.insight__slider', {
     slidesPerView: 'auto',
-    spaceBetween: 33,
+    spaceBetween: 30,
     loop: true,
     centeredSlides: true,
+    scrollbar: {
+      el: '.insight__scrollbar',
+    },
     breakpoints: {
       993: {
         centeredSlides: false,
