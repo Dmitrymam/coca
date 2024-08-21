@@ -83,8 +83,9 @@
 .text {
   &-p {
     &-subtitle {
-      @include flex-aling-center;
+      display: flex;
       gap: 27px;
+      align-items: flex-start;
       font-weight: 600;
       font-size: 32px;
       line-height: 131%;
@@ -110,7 +111,7 @@
         width: 76px;
         height: 1px;
         background-color: var(--neutral-color-100);
-        transform: translateY(-43px);
+        transform: translateY(20px);
 
         @include mini-desktop {
           display: none;
