@@ -1,0 +1,11 @@
+@import './mixins/';
+@import './base/';
+@import './global/';
+
+// components
+
+@import './components/header';
+@import './components/audience/hero';
+@import './components/audience/powerful';
+@import './components/audience/our-team';
+@import './components/footer';

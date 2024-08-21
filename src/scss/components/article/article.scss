@@ -1,0 +1,246 @@
+.article {
+  padding: 80px 0 160px;
+
+  @include mobile {
+    padding: 50px 0 120px;
+  }
+
+  &__top {
+    margin-bottom: 56px;
+
+    @include mobile {
+      margin-bottom: 40px;
+    }
+
+    &-title {
+      margin-bottom: 48px;
+      max-width: 970px;
+      font-weight: 700;
+      letter-spacing: -0.04em;
+      color: var(--neutral-color-100);
+
+      @include mobile {
+        margin-bottom: 30px;
+      }
+    }
+
+    &-img {
+      margin-bottom: 80px;
+
+      @include mobile {
+        margin-bottom: 40px;
+      }
+    }
+
+    &-desrc {
+      font-weight: 400;
+      line-height: 178%;
+      color: var(--neutral-color-100);
+    }
+
+    &-after {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 24px;
+      max-width: 940px;
+
+      @include mobile {
+        margin-bottom: 10px;
+      }
+
+      &-img {
+        margin-right: 24px;
+        border-radius: 50%;
+      }
+
+      &-info {
+        margin-right: auto;
+        max-width: 207px;
+      }
+
+      &-name {
+        margin-bottom: 4px;
+        font-weight: 600;
+        font-style: normal;
+        line-height: 144%;
+        color: var(--neutral-color-100);
+      }
+
+      &-job {
+        font-weight: 500;
+        line-height: 140%;
+        color: var(--neutral-color-150);
+      }
+
+      &-time-read {
+        margin-top: auto;
+        font-weight: 500;
+        line-height: 150%;
+        color: var(--neutral-color-150);
+
+        @include mobile {
+          text-align: end;
+        }
+      }
+    }
+  }
+
+  &__bottom {
+    &-title {
+      margin-bottom: 24px;
+      font-weight: 600;
+      color: var(--neutral-color-100);
+
+      @include mobile {
+        margin-bottom: 16px;
+      }
+    }
+
+    &-descr {
+      margin-bottom: 56px;
+      font-weight: 400;
+      line-height: 178%;
+      color: var(--neutral-color-100);
+
+      @include mobile {
+        margin-bottom: 40px;
+      }
+    }
+
+    &-after {
+      display: flex;
+      gap: 48px;
+      align-items: flex-start;
+
+      @include mobile {
+        gap: 20px;
+      }
+
+      &-social {
+        display: inline-flex;
+        gap: 32px;
+        align-items: center;
+        margin-bottom: 14px;
+
+        @include mobile {
+          gap: 20px;
+          margin-bottom: 10px;
+        }
+
+        &-icon {
+          &:not(:last-child) {
+            display: inline-flex;
+            flex-shrink: 0;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            width: 32px;
+            height: 32px;
+            background-color: var(--neutral-color-50);
+          }
+
+          &:last-child {
+            margin-left: -8px;
+            font-weight: 500;
+            line-height: 162%;
+            color: var(--neutral-color-100);
+          }
+
+          @include mobile {
+            &:last-child {
+              display: none;
+            }
+          }
+        }
+
+        & svg path {
+          fill: var(--neutral-color-100);
+        }
+      }
+
+      &-descr1 {
+        margin-bottom: 16px;
+        font-weight: 400;
+        line-height: 150%;
+        color: var(--neutral-color-150);
+
+        @include mobile {
+          margin-bottom: 10px;
+        }
+      }
+
+      &-name {
+        margin-bottom: 16px;
+        font-weight: 600;
+        font-style: normal;
+        line-height: 131%;
+        letter-spacing: -0.03em;
+        color: var(--neutral-color-100);
+
+        &--mobile {
+          display: none;
+        }
+
+        @include mobile {
+          display: none;
+
+          &--mobile {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            align-items: center;
+          }
+        }
+      }
+
+      &-job {
+        margin-bottom: 16px;
+        font-weight: 500;
+        font-style: normal;
+        line-height: 162%;
+        color: var(--neutral-color-150);
+
+        &--mobile {
+          display: none;
+        }
+
+        @include mobile {
+          display: none;
+
+          &--mobile {
+            display: flex;
+            margin-bottom: 0;
+          }
+        }
+      }
+
+      &-descr2 {
+        max-width: 650px;
+        font-weight: 400;
+        line-height: 178%;
+        color: var(--neutral-color-100);
+
+        @include mobile {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__descr {
+    display: none;
+
+    @include mobile {
+      display: block;
+      margin-top: 24px;
+      font-weight: 400;
+      line-height: 178%;
+      color: var(--neutral-color-100);
+    }
+
+    @include small-mobile {
+      margin-top: 16px;
+    }
+  }
+}
