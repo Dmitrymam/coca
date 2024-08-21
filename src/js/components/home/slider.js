@@ -28,6 +28,11 @@ export const useTestimonialsSlider = () => {
     // ,
     slidesPerView: '1',
     loop: true,
+    effect: 'fade',
+    speed: 5000,
+    fadeEffect: {
+      crossFade: true,
+    },
     navigation: {
       nextEl: '.testimonials__btn--next',
       prevEl: '.testimonials__btn--prev',
