@@ -41,7 +41,28 @@
     flex-wrap: wrap;
 
     @include mobile {
-      gap: 10px;
+      display: none;
+    }
+  }
+
+  &__slider {
+    display: none !important;
+
+    @include mobile {
+      display: flex !important;
+      max-width: 100%;
+    }
+  }
+
+  &__slide {
+    &-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 16px;
+      max-width: 160px;
+      height: 90px;
+      background-color: #fff;
     }
   }
 
