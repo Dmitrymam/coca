@@ -5,6 +5,7 @@
     padding: 30px 0 12px;
   }
 
+
   &__title {
     margin-bottom: 100px;
     max-width: 741px;
@@ -24,6 +25,12 @@
   &__map {
     @include flex-all-between;
     gap: 86px;
+
+   &-map{
+    width: 986px;
+    height: 544px;
+
+   }
 
     @include tablet {
       flex-direction: column;
@@ -89,4 +96,8 @@
       }
     }
   }
+}
+
+[class*="copyrights-pane"] {
+  display: none !important;
 }
