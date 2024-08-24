@@ -27,10 +27,11 @@
     gap: 86px;
 
    &-map{
-    width: 986px;
     height: 544px;
-
+    max-width: 900px;
    }
+
+  
 
     @include tablet {
       flex-direction: column;
@@ -98,6 +99,3 @@
   }
 }
 
-[class*="copyrights-pane"] {
-  display: none !important;
-}

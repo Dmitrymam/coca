@@ -2,81 +2,88 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Coca - {=$title}</title>
-  <script src="https://api-maps.yandex.ru/v3/?apikey=2cb75bc5-1f08-4263-827c-d7e4eda0cf21&lang=ru_RU"></script>
+  <script src="https://api-maps.yandex.ru/v3/?apikey=5174b309-8b04-4ab4-9650-e21a2239e7bc&lang=ru_RU"></script>
   <script>
-    window.map = null;
+       window.map = null;
 
-    // Главная функция, вызывается при запуске скрипта
-    main();
-    async function main() {
-      // ожидание загрузки модулей
-      await ymaps3.ready;
-      const {
-        YMap,
-        YMapDefaultSchemeLayer,
-        YMapControls,
-        YMapDefaultFeaturesLayer,
-        YMapMarker,
-      } = ymaps3;
+// Главная функция, вызывается при запуске скрипта
+main();
+async function main() {
+  // ожидание загрузки модулей
+  await ymaps3.ready;
+  const {
+    YMap,
+    YMapDefaultSchemeLayer,
+    YMapControls,
+    YMapDefaultFeaturesLayer,
+    YMapMarker,
+  } = ymaps3;
 
-      // Импорт модулей для элементов управления на карте
-      const { YMapZoomControl, YMapGeolocationControl } = await ymaps3.import(
-        '@yandex/ymaps3-controls@0.0.1',
-      );
+  // Импорт модулей для элементов управления на карте
+  const { YMapZoomControl, YMapGeolocationControl } = await ymaps3.import(
+    '@yandex/ymaps3-controls@0.0.1',
+  );
 
-      // Координаты центра карты
-      const CENTER_COORDINATES = [102.84245105605702,20.926678845613086];
-      // координаты метки на карте
-      const MARKER_COORDINATES = [134.83463855605538,-25.47186389240676];
+  // Координаты центра карты
+  const CENTER_COORDINATES = [102.84245105605702, 20.926678845613086];
+  // координаты метки на карте
+  const MARKER_COORDINATES = [134.83463855605538, -25.47186389240676];
 
-      // Объект с параметрами центра и зумом карты
-      const LOCATION = { center: CENTER_COORDINATES, zoom: 2 };
+  // Объект с параметрами центра и зумом карты
+  const LOCATION = { center: CENTER_COORDINATES, zoom: 2 };
 
-      // Создание объекта карты
-      map = new YMap(document.getElementById('map'), { location: LOCATION });
+  // Создание объекта карты
+  map = new YMap(document.getElementById('map'), { location: LOCATION });
 
-      // Добавление слоев на карту
-      map.addChild((scheme = new YMapDefaultSchemeLayer()));
-      map.addChild(new YMapDefaultFeaturesLayer());
+  // Добавление слоев на карту
+  map.addChild(scheme = new YMapDefaultSchemeLayer());
+  map.addChild(new YMapDefaultFeaturesLayer());
 
-      // Добавление элементов управления на карту
-      map.addChild(
-        new YMapControls({ position: 'right' }).addChild(
-          new YMapZoomControl({}),
-        ),
-      );
-      map.addChild(
-        new YMapControls({ position: 'top right' }).addChild(
-          new YMapGeolocationControl({}),
-        ),
-      );
+  // Добавление элементов управления на карту
+  map.addChild(
+    new YMapControls({ position: 'right' }).addChild(
+      new YMapZoomControl({}),
+    ),
+  );
+  map.addChild(
+    new YMapControls({ position: 'top right' }).addChild(
+      new YMapGeolocationControl({}),
+    ),
+  );
 
-      // Создание маркера
-      const el = document.createElement('img');
-      el.className = 'my-marker';
-      el.src = './marker.svg';
-      el.title = 'Маркер';
-      // При клике на маркер меняем центр карты на LOCATION с заданным duration
-      el.onclick = () =>
-        map.update({ location: { ...LOCATION, duration: 400 } });
+  // Создание маркера
+  const el = document.createElement('img');
+  el.className = 'my-marker';
+  el.src = './assets/icons/marker.svg';
+  el.title = 'Маркер';
+  // При клике на маркер меняем центр карты на LOCATION с заданным duration
+  el.onclick = () =>
+    map.update({ location: { ...LOCATION, duration: 400 } });
 
-      // Создание заголовка маркера
-      const markerTitle = document.createElement('div');
-      markerTitle.className = 'marker-title';
-      markerTitle.innerHTML = 'Заголовок маркера';
+  // Создание заголовка маркера
+  const markerTitle = document.createElement('div');
+  markerTitle.className = 'marker-title';
+  markerTitle.innerHTML = 'Yogja, INA';
 
-      // Контейнер для элементов маркера
-      const imgContainer = document.createElement('div');
-      imgContainer.appendChild(el);
-      imgContainer.appendChild(markerTitle);
+  // Описание маркера
+  const markerSubtitle = document.createElement('div');
+  markerTitle.className = 'marker-subtitle';
+  markerTitle.innerHTML = '100 Smith StreetCollingwood VIC 3066 AU';
 
-      // Добавление центра карты
-      map.addChild(new YMapMarker({ coordinates: CENTER_COORDINATES }));
 
-      // Добавление маркера на карту
-      map.addChild(
-        new YMapMarker({ coordinates: MARKER_COORDINATES }, imgContainer),
-      );
-    }
+  // Контейнер для элементов маркера
+  const imgContainer = document.createElement('div');
+  imgContainer.appendChild(markerTitle);
+  imgContainer.appendChild(markerSubtitle);
+
+
+  // Добавление центра карты
+  map.addChild(new YMapMarker({ coordinates: CENTER_COORDINATES }));
+
+  // Добавление маркера на карту
+  map.addChild(
+    new YMapMarker({ coordinates: MARKER_COORDINATES }, imgContainer),
+  );
+}
   </script>
 </head>
