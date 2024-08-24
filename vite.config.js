@@ -16,7 +16,7 @@ export default defineConfig({
     emptyOutDir: true,
     rollupOptions: {
       input: {
-        main: '.coca/src/index.html',
+        main: './src/index.html',
         pricing: './src/pricing.html',
         contact: './src/contact.html',
         audience: './src/audience.html',
