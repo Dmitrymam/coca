@@ -18,8 +18,7 @@
 
     @include small-tablet {
       justify-content: center;
-      margin-right: 25px
-
+      margin-right: 25px;
     }
   }
 
@@ -138,4 +137,8 @@
       display: none;
     }
   }
+}
+
+.iti__country {
+  color: black;
 }

@@ -97,6 +97,10 @@
     }
   }
 
+  &__slider {
+    position: relative !important;
+  }
+
   &__slide {
     &-img {
       margin-bottom: 16px;

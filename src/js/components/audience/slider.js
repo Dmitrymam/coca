@@ -38,7 +38,7 @@ export const useOurTeamSlider = () => {
       el: '.our-team__scrollbar',
     },
     breakpoints: {
-      1201: { slidesPerView: 3 },
+      1201: { slidesPerView: 3, spaceBetween: 30 },
       769: { slidesPerView: 2.5, spaceBetween: 20 },
       577: { slidesPerView: 2, spaceBetween: 15 },
       381: {

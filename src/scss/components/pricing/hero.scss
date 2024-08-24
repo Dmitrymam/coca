@@ -212,7 +212,8 @@
       font-weight: 600;
       line-height: 150%;
       text-align: center;
-      color: var(--neutral-color-100);
+      color: black;
+      background-color: #fff;
       transition: opacity var(--transition);
 
       &:hover {

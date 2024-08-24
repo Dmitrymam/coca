@@ -68,7 +68,7 @@
     font-size: 12px;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    fill: var(--neutral-color-90);
+    fill: var(--neutral-color-100);
     animation-name: move;
     animation-duration: 20s;
     animation-timing-function: linear;
@@ -96,7 +96,7 @@
       transform: translate(20px, 20px);
 
       rect {
-        fill: var(--neutral-color-90);
+        fill: var(--neutral-color-100);
       }
     }
   }
@@ -115,6 +115,8 @@
   }
 
   &__slide {
+    padding-bottom: 20px;
+
     @include tablet {
       display: flex;
       height: auto !important;
@@ -256,18 +258,6 @@
       display: block;
       text-align: center;
     }
-  }
-}
-
-.swiper {
-  position: static !important;
-}
-
-.swiper-scrollbar {
-  top: 105% !important;
-
-  @include tablet {
-    top: 100% !important;
   }
 }
 

@@ -34,20 +34,18 @@ export const usePlans = () => {
   };
 
   const setPriceSwithSale = () => {
-    starterPrice.textContent = priceList.starter.swithSale;
-    popularPrice.textContent = priceList.popular.swithSale;
-    enterprisePrice.textContent = priceList.enterprise.swithSale;
+    starterPrice.textContent = `$${priceList.starter.swithSale}`;
+    popularPrice.textContent = `$${priceList.popular.swithSale}`;
+    enterprisePrice.textContent = `$${priceList.enterprise.swithSale}`;
     starterPriceText.textContent = '/yr';
     popularPriceText.textContent = '/yr';
     enterprisePriceText.textContent = '/yr';
   };
 
-  switcher.checked = true;
-
   const setPriceDefault = () => {
-    starterPrice.textContent = priceList.starter.default;
-    popularPrice.textContent = priceList.popular.default;
-    enterprisePrice.textContent = priceList.enterprise.default;
+    starterPrice.textContent = `$${priceList.starter.default}`;
+    popularPrice.textContent = `$${priceList.popular.default}`;
+    enterprisePrice.textContent = `$${priceList.enterprise.default}`;
     starterPriceText.textContent = '/mo';
     popularPriceText.textContent = '/mo';
     enterprisePriceText.textContent = '/mo';
